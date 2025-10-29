@@ -1,0 +1,485 @@
+
+import { Property, Translations } from './types';
+
+export const MOCK_PROPERTIES: Property[] = [
+  {
+    id: 1,
+    title: {
+      ru: 'Роскошная квартира с видом на море в Махмутларе',
+      en: 'Luxury Sea View Apartment in Mahmutlar',
+      tr: 'Mahmutlar\'da Lüks Deniz Manzaralı Daire',
+    },
+    description: {
+      ru: 'Просторная квартира 2+1 с современным дизайном и панорамным видом на Средиземное море. Полностью меблирована и готова к заселению. Комплекс с богатой инфраструктурой.',
+      en: 'Spacious 2+1 apartment with modern design and panoramic views of the Mediterranean Sea. Fully furnished and ready to move in. A complex with rich infrastructure.',
+      tr: 'Modern tasarımlı ve panoramik Akdeniz manzaralı geniş 2+1 daire. Full eşyalı ve taşınmaya hazır. Zengin altyapıya sahip bir kompleks.',
+    },
+    images: [
+      'https://myestateinvest.com/wp-content/uploads/2025/10/photo_2025-10-09_14-36-57-1170x785.jpg',
+      'https://myestateinvest.com/wp-content/uploads/2025/10/photo_2025-10-09_14-36-58-2-960x785.jpg',
+      'https://myestateinvest.com/wp-content/uploads/2025/10/photo_2025-10-09_14-36-59-1170x785.jpg',
+      'https://myestateinvest.com/wp-content/uploads/2025/10/photo_2025-10-09_14-36-54-2-1170x785.jpg',
+    ],
+    district: 'Mahmutlar',
+    price: 185000,
+    area: 120,
+    rooms: '2+1',
+    type: 'apartment',
+    seller: 'developer',
+    distanceToSea: 250,
+    infrastructure: [
+      { key: 'pool', available: true },
+      { key: 'slides', available: true },
+      { key: 'sauna', available: true },
+      { key: 'playground', available: true },
+      { key: 'bbq', available: true },
+      { key: 'gym', available: true },
+      { key: 'tennis', available: false },
+      { key: 'billiards', available: true },
+      { key: 'garden', available: true },
+      { key: 'security', available: true },
+      { key: 'gardener', available: true },
+      { key: 'concierge', available: true },
+      { key: 'generator', available: true },
+      { key: 'satellite', available: true },
+    ],
+  },
+  {
+    id: 2,
+    title: {
+      ru: 'Уютная вилла с частным садом в Каргыджаке',
+      en: 'Cozy Villa with Private Garden in Kargicak',
+      tr: 'Kargıcak\'ta Özel Bahçeli Rahat Villa',
+    },
+    description: {
+      ru: 'Прекрасная вилла 4+1 с собственным бассейном и ухоженным садом. Идеальное место для семейного отдыха и постоянного проживания. Тихое и спокойное место.',
+      en: 'Beautiful 4+1 villa with a private pool and a well-kept garden. An ideal place for family holidays and permanent residence. Quiet and peaceful location.',
+      tr: 'Özel havuzlu ve bakımlı bahçeli güzel 4+1 villa. Aile tatilleri ve daimi ikamet için ideal bir yer. Sessiz ve huzurlu bir konum.',
+    },
+    images: [
+      'https://myestateinvest.com/wp-content/uploads/2023/09/photo_5_2023-08-14_14-28-29-1170x785.jpg',
+      'https://myestateinvest.com/wp-content/uploads/2023/09/photo_14_2023-08-14_14-28-29-1170x785.jpg',
+      'https://myestateinvest.com/wp-content/uploads/2023/09/photo_10_2023-08-14_14-28-29-1170x785.jpg',
+    ],
+    district: 'Kargicak',
+    price: 450000,
+    area: 250,
+    rooms: '4+1',
+    type: 'villa',
+    seller: 'owner',
+    distanceToSea: 1500,
+    infrastructure: [
+      { key: 'pool', available: true },
+      { key: 'slides', available: false },
+      { key: 'sauna', available: true },
+      { key: 'playground', available: false },
+      { key: 'bbq', available: true },
+      { key: 'gym', available: false },
+      { key: 'tennis', available: false },
+      { key: 'billiards', available: false },
+      { key: 'garden', available: true },
+      { key: 'security', available: true },
+      { key: 'gardener', available: true },
+      { key: 'concierge', available: false },
+      { key: 'generator', available: true },
+      { key: 'satellite', available: true },
+    ],
+  },
+  {
+    id: 3,
+    title: {
+        ru: "Современная квартира в центре Алании",
+        en: "Modern Apartment in Alanya Center",
+        tr: "Alanya Merkez'de Modern Daire"
+    },
+    description: {
+        ru: "Стильная квартира 1+1 в новом доме в самом сердце Алании. Вся городская инфраструктура в шаговой доступности. Отличный вариант для инвестиций и сдачи в аренду.",
+        en: "Stylish 1+1 apartment in a new building in the heart of Alanya. All city infrastructure is within walking distance. An excellent option for investment and rental.",
+        tr: "Alanya'nın kalbinde yeni bir binada şık 1+1 daire. Tüm şehir altyapısı yürüme mesafesindedir. Yatırım ve kiralama için mükemmel bir seçenek."
+    },
+    images: [
+        "https://myestateinvest.com/wp-content/uploads/2023/03/whatsapp-image-2022-11-01-at-14.44.04-1-1170x785.jpeg",
+        "https://myestateinvest.com/wp-content/uploads/2023/03/whatsapp-image-2022-11-01-at-14.44.05-1-1170x785.jpeg"
+    ],
+    district: "Alanya Center",
+    price: 120000,
+    area: 65,
+    rooms: "1+1",
+    type: "apartment",
+    seller: "developer",
+    distanceToSea: 600,
+    infrastructure: [
+        { key: 'pool', available: true },
+        { key: 'slides', available: false },
+        { key: 'sauna', available: true },
+        { key: 'playground', available: false },
+        { key: 'bbq', available: false },
+        { key: 'gym', available: true },
+        { key: 'tennis', available: false },
+        { key: 'billiards', available: false },
+        { key: 'garden', available: true },
+        { key: 'security', available: true },
+        { key: 'gardener', available: false },
+        { key: 'concierge', available: true },
+        { key: 'generator', available: true },
+        { key: 'satellite', available: true },
+    ]
+  },
+  {
+    id: 4,
+    title: {
+        ru: "Семейный дом в тихом районе Оба",
+        en: "Family House in the quiet Oba district",
+        tr: "Sakin Oba semtinde aile evi"
+    },
+    description: {
+        ru: "Просторный дом 3+1 с садом. Идеально подходит для семей с детьми. Рядом школы, парки и магазины. Тихий и зеленый район.",
+        en: "Spacious 3+1 house with a garden. Ideal for families with children. Close to schools, parks and shops. Quiet and green area.",
+        tr: "Bahçeli geniş 3+1 ev. Çocuklu aileler için ideal. Okullara, parklara ve mağazalara yakın. Sakin ve yeşil alan."
+    },
+    images: [
+        "https://myestateinvest.com/wp-content/uploads/2023/12/1-28-1170x785.jpg",
+        "https://myestateinvest.com/wp-content/uploads/2023/12/3-32-1170x785.jpg",
+        "https://myestateinvest.com/wp-content/uploads/2023/10/photo_6_2023-09-07_14-45-39-900x785.jpg",
+        "https://myestateinvest.com/wp-content/uploads/2023/10/photo_7_2023-09-07_14-45-39-900x785.jpg"
+    ],
+    district: "Oba",
+    price: 280000,
+    area: 180,
+    rooms: "3+1",
+    type: "house",
+    seller: "owner",
+    distanceToSea: 2000,
+    infrastructure: [
+        { key: 'pool', available: false },
+        { key: 'slides', available: false },
+        { key: 'sauna', available: false },
+        { key: 'playground', available: true },
+        { key: 'bbq', available: true },
+        { key: 'gym', available: false },
+        { key: 'tennis', available: false },
+        { key: 'billiards', available: false },
+        { key: 'garden', available: true },
+        { key: 'security', available: false },
+        { key: 'gardener', available: false },
+        { key: 'concierge', available: false },
+        { key: 'generator', available: false },
+        { key: 'satellite', available: true },
+    ]
+  },
+];
+
+
+export const DISTRICTS = ['Avsallar', 'Alanya Center', 'Oba', 'Tosmur', 'Kestel', 'Mahmutlar', 'Kargicak'];
+export const ROOM_OPTIONS = ['1+1', '2+1', '3+1', '4+1', '5+1'];
+export const PROPERTY_TYPES = ['apartment', 'villa', 'house'];
+export const SELLER_TYPES = ['owner', 'developer'];
+
+export const translations: Translations = {
+  ru: {
+    // Header
+    nav_home: 'Главная',
+    nav_about: 'О нас',
+    nav_contact: 'Контакты',
+    phone_number: '+90 555 123 45 67',
+
+    // Home Page
+    hero_title: 'Найдите дом своей мечты в Алании',
+    hero_subtitle: 'World Real Estate - ваш надежный партнер в мире недвижимости Турции. Мы предлагаем лучшие объекты от застройщиков и собственников.',
+    search_apartments: 'Поиск квартир',
+    all_offers: 'Все предложения',
+
+    // Filters
+    filter_district: 'Район',
+    filter_price: 'Цена',
+    filter_seller: 'Продавец',
+    filter_rooms: 'Комнаты',
+    filter_type: 'Тип',
+    filter_all: 'Все',
+    filter_from_owner: 'От собственника',
+    filter_from_developer: 'От застройщика',
+    filter_apply: 'Применить',
+    filter_reset: 'Сбросить',
+
+    // Property Card & Details
+    rooms: 'Комнаты',
+    area: 'Площадь',
+    sqm: 'м²',
+    sea_distance: 'До моря',
+    meter: 'м',
+    details_btn: 'Подробнее',
+    price_from: 'от',
+    district: 'Район',
+    seller: 'Продавец',
+    type: 'Тип недвижимости',
+    infrastructure: 'Инфраструктура',
+    request_info: 'Запросить информацию',
+    
+    // Infrastructure Keys
+    pool: 'Большой открытый бассейн',
+    slides: 'Водные горки',
+    sauna: 'Сауна',
+    playground: 'Детская площадка',
+    bbq: 'Беседка для барбекю',
+    gym: 'Фитнес-зал',
+    tennis: 'Настольный теннис',
+    billiards: 'Бильярд',
+    garden: 'Ландшафтный сад',
+    security: 'Охрана 24/7',
+    gardener: 'Садовник',
+    concierge: 'Консьерж',
+    generator: 'Электрогенератор',
+    satellite: 'Центральная спутниковая система',
+    available: 'Доступно',
+    not_available: 'Недоступно',
+
+    // Contact Page
+    contact_us: 'Свяжитесь с нами',
+    our_office: 'Наш офис',
+    address: 'ул. Ататюрка, 123, Алания, Турция',
+    email: 'info@world-real-estate.com',
+    social_media: 'Мы в соцсетях',
+    leave_request: 'Оставить заявку',
+    your_name: 'Ваше имя',
+    your_phone: 'Ваш телефон',
+    your_email: 'Ваш Email',
+    your_message: 'Сообщение',
+    send_request: 'Отправить',
+    request_success: 'Ваша заявка успешно отправлена!',
+
+    // About Page
+    about_title: 'О World Real Estate',
+    about_text_1: 'World Real Estate — ведущее агентство недвижимости в Алании, специализирующееся на предоставлении полного спектра услуг по покупке, продаже и аренде жилой и коммерческой недвижимости. Наша миссия — помочь вам найти идеальный дом под солнцем Турции, обеспечивая при этом максимальный комфорт и юридическую чистоту сделки.',
+    about_text_2: 'Наша команда состоит из опытных и лицензированных риэлторов, которые прекрасно знают рынок недвижимости Алании и всегда готовы предложить вам лучшие варианты, соответствующие вашим пожеланиям и бюджету. Мы ценим доверие наших клиентов и стремимся к долгосрочным отношениям.',
+
+    // Footer
+    copyright: '© 2024 World Real Estate. Все права защищены.',
+    
+    // Admin
+    admin_panel: 'Панель администратора',
+    login: 'Войти',
+    username: 'Имя пользователя',
+    password: 'Пароль',
+    logout: 'Выйти',
+    manage_properties: 'Управление объектами',
+    view_requests: 'Просмотр заявок',
+    add_property: 'Добавить объект',
+    edit_property: 'Редактировать объект',
+    delete_property: 'Удалить объект',
+    property_title: 'Название',
+    property_description: 'Описание',
+    property_images: 'Изображения (URL через запятую)',
+    actions: 'Действия',
+    no_requests: 'Новых заявок нет.',
+    from_property: 'С объекта',
+    date: 'Дата',
+    confirm_delete: 'Вы уверены, что хотите удалить этот объект?',
+    cancel: 'Отмена',
+    delete: 'Удалить',
+    save: 'Сохранить',
+  },
+  en: {
+    // Header
+    nav_home: 'Home',
+    nav_about: 'About Us',
+    nav_contact: 'Contacts',
+    phone_number: '+90 555 123 45 67',
+
+    // Home Page
+    hero_title: 'Find Your Dream Home in Alanya',
+    hero_subtitle: 'World Real Estate is your reliable partner in the world of Turkish real estate. We offer the best properties from developers and owners.',
+    search_apartments: 'Apartment Search',
+    all_offers: 'All Offers',
+
+    // Filters
+    filter_district: 'District',
+    filter_price: 'Price',
+    filter_seller: 'Seller',
+    filter_rooms: 'Rooms',
+    filter_type: 'Type',
+    filter_all: 'All',
+    filter_from_owner: 'By Owner',
+    filter_from_developer: 'By Developer',
+    filter_apply: 'Apply',
+    filter_reset: 'Reset',
+    
+    // Property Card & Details
+    rooms: 'Rooms',
+    area: 'Area',
+    sqm: 'm²',
+    sea_distance: 'To the sea',
+    meter: 'm',
+    details_btn: 'Details',
+    price_from: 'from',
+    district: 'District',
+    seller: 'Seller',
+    type: 'Property Type',
+    infrastructure: 'Infrastructure',
+    request_info: 'Request More Information',
+    
+    // Infrastructure Keys
+    pool: 'Large outdoor pool',
+    slides: 'Water slides',
+    sauna: 'Sauna',
+    playground: 'Children\'s playground',
+    bbq: 'BBQ gazebo',
+    gym: 'Fitness gym',
+    tennis: 'Table tennis',
+    billiards: 'Billiards',
+    garden: 'Landscaped garden',
+    security: '24/7 security',
+    gardener: 'Gardener',
+    concierge: 'Concierge',
+    generator: 'Power generator',
+    satellite: 'Central satellite TV system',
+    available: 'Available',
+    not_available: 'Not Available',
+
+    // Contact Page
+    contact_us: 'Contact Us',
+    our_office: 'Our Office',
+    address: 'Atatürk Cd. No:123, Alanya, Turkey',
+    email: 'info@world-real-estate.com',
+    social_media: 'Find us on social media',
+    leave_request: 'Leave a Request',
+    your_name: 'Your Name',
+    your_phone: 'Your Phone',
+    your_email: 'Your Email',
+    your_message: 'Message',
+    send_request: 'Send Request',
+    request_success: 'Your request has been sent successfully!',
+
+    // About Page
+    about_title: 'About World Real Estate',
+    about_text_1: 'World Real Estate is a leading real estate agency in Alanya, specializing in providing a full range of services for the purchase, sale, and rental of residential and commercial properties. Our mission is to help you find the perfect home under the Turkish sun, while ensuring maximum comfort and legal clarity of the transaction.',
+    about_text_2: 'Our team consists of experienced and licensed realtors who know the Alanya real estate market perfectly and are always ready to offer you the best options that match your wishes and budget. We value the trust of our clients and strive for long-term relationships.',
+
+    // Footer
+    copyright: '© 2024 World Real Estate. All rights reserved.',
+    
+    // Admin
+    admin_panel: 'Admin Panel',
+    login: 'Login',
+    username: 'Username',
+    password: 'Password',
+    logout: 'Logout',
+    manage_properties: 'Manage Properties',
+    view_requests: 'View Requests',
+    add_property: 'Add Property',
+    edit_property: 'Edit Property',
+    delete_property: 'Delete Property',
+    property_title: 'Title',
+    property_description: 'Description',
+    property_images: 'Images (URLs, comma-separated)',
+    actions: 'Actions',
+    no_requests: 'No new requests.',
+    from_property: 'From property',
+    date: 'Date',
+    confirm_delete: 'Are you sure you want to delete this property?',
+    cancel: 'Cancel',
+    delete: 'Delete',
+    save: 'Save',
+  },
+  tr: {
+    // Header
+    nav_home: 'Anasayfa',
+    nav_about: 'Hakkımızda',
+    nav_contact: 'İletişim',
+    phone_number: '+90 555 123 45 67',
+
+    // Home Page
+    hero_title: 'Alanya\'daki Hayalinizdeki Evi Bulun',
+    hero_subtitle: 'World Real Estate, Türkiye emlak dünyasındaki güvenilir ortağınızdır. Müteahhitlerden ve sahiplerinden en iyi mülkleri sunuyoruz.',
+    search_apartments: 'Daire Arama',
+    all_offers: 'Tüm Teklifler',
+
+    // Filters
+    filter_district: 'İlçe',
+    filter_price: 'Fiyat',
+    filter_seller: 'Satıcı',
+    filter_rooms: 'Oda',
+    filter_type: 'Tip',
+    filter_all: 'Tümü',
+    filter_from_owner: 'Sahibinden',
+    filter_from_developer: 'Müteahhitten',
+    filter_apply: 'Uygula',
+    filter_reset: 'Sıfırla',
+
+    // Property Card & Details
+    rooms: 'Oda',
+    area: 'Alan',
+    sqm: 'm²',
+    sea_distance: 'Denize',
+    meter: 'm',
+    details_btn: 'Detaylar',
+    price_from: 'başlayan',
+    district: 'İlçe',
+    seller: 'Satıcı',
+    type: 'Emlak Tipi',
+    infrastructure: 'Altyapı',
+    request_info: 'Bilgi Talep Et',
+
+    // Infrastructure Keys
+    pool: 'Geniş açık havuz',
+    slides: 'Su kaydırakları',
+    sauna: 'Sauna',
+    playground: 'Çocuk oyun alanı',
+    bbq: 'Barbekü çardağı',
+    gym: 'Fitness salonu',
+    tennis: 'Masa tenisi',
+    billiards: 'Bilardo',
+    garden: 'Peyzajlı bahçe',
+    security: '7/24 güvenlik',
+    gardener: 'Bahçıvan',
+    concierge: 'Kapıcı',
+    generator: 'Jeneratör',
+    satellite: 'Merkezi uydu TV sistemi',
+    available: 'Mevcut',
+    not_available: 'Mevcut Değil',
+
+    // Contact Page
+    contact_us: 'Bize Ulaşın',
+    our_office: 'Ofisimiz',
+    address: 'Atatürk Cd. No:123, Alanya, Türkiye',
+    email: 'info@world-real-estate.com',
+    social_media: 'Sosyal medyada bizi bulun',
+    leave_request: 'İstek Bırakın',
+    your_name: 'Adınız',
+    your_phone: 'Telefonunuz',
+    your_email: 'E-postanız',
+    your_message: 'Mesaj',
+    send_request: 'Gönder',
+    request_success: 'Talebiniz başarıyla gönderildi!',
+
+    // About Page
+    about_title: 'World Real Estate Hakkında',
+    about_text_1: 'World Real Estate, konut ve ticari mülklerin alımı, satımı ve kiralanması konusunda tam bir hizmet yelpazesi sunan Alanya\'nın önde gelen emlak acentesidir. Misyonumuz, işlemde maksimum konfor ve yasal netlik sağlarken, Türkiye\'nin güneşi altında mükemmel evi bulmanıza yardımcı olmaktır.',
+    about_text_2: 'Ekibimiz, Alanya emlak piyasasını mükemmel bir şekilde bilen ve her zaman istek ve bütçenize uygun en iyi seçenekleri sunmaya hazır, deneyimli ve lisanslı emlakçılardan oluşmaktadır. Müşterilerimizin güvenine değer veriyor ve uzun vadeli ilişkiler kurmayı hedefliyoruz.',
+
+    // Footer
+    copyright: '© 2024 World Real Estate. Tüm hakları saklıdır.',
+    
+    // Admin
+    admin_panel: 'Yönetici Paneli',
+    login: 'Giriş Yap',
+    username: 'Kullanıcı Adı',
+    password: 'Şifre',
+    logout: 'Çıkış Yap',
+    manage_properties: 'Mülkleri Yönet',
+    view_requests: 'İstekleri Görüntüle',
+    add_property: 'Mülk Ekle',
+    edit_property: 'Mülkü Düzenle',
+    delete_property: 'Mülkü Sil',
+    property_title: 'Başlık',
+    property_description: 'Açıklama',
+    property_images: 'Resimler (URL\'ler, virgülle ayrılmış)',
+    actions: 'Eylemler',
+    no_requests: 'Yeni istek yok.',
+    from_property: 'Mülkten',
+    date: 'Tarih',
+    confirm_delete: 'Bu mülkü silmek istediğinizden emin misiniz?',
+    cancel: 'İptal',
+    delete: 'Sil',
+    save: 'Kaydet',
+  },
+};
